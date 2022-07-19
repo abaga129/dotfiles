@@ -1,0 +1,4 @@
+= Sales Manager =
+
+[[Bug #14852 / IR-4497]]
+

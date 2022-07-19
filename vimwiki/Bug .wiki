@@ -1,0 +1,19 @@
+= Bug 17975 =
+
+Order #s
+
+* 42008
+* 42019
+* 42035
+* 42076
+* 42103
+
+== Steps to Fix ==
+* Reverse sale #750075 from Transaction Analysis in Sales Manager 
+  - Only check sale #750075 in the "Reverse Transaction" popup.
+  - Unselect Sale #74863
+  - Uncheck "Is NSF?" and put a reason in the above text box.
+* Reactivate customer "Modern Classics" in Cabinet Order and mark terms as "Open"
+* Recreate sale in Point of Sale and Process it.
+* Approve reversed transaction and new sale in "Audit Transactions" in Sales Manager.
+* Process End Of Day

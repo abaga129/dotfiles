@@ -78,7 +78,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,3 +120,5 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:$(yarn global bin)"
 export PATH="/home/reker/.local/bin:$PATH"
 alias dotfiles='/usr/bin/git --git-dir=/home/reker/.dotfiles/ --work-tree=/home/reker'
+
+INSERT_MODE_INDICATOR="%F{yellow}+%f"

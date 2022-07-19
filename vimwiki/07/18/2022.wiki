@@ -1,0 +1,20 @@
+TODO:
+
+- [X] Fix Modern Classics Prepay Balance
+- [o] PowerBI changes
+	- [X] Assist Matt in writing the SQL code	
+	- [X] Review code from Matt
+	- [ ] Ask Jeff how he wants the heirarchy displayed
+	- [ ] Send finished script to Chris
+- [.] Point Of Sale Release
+      	- [X] Implement #17972 - Auto select orders when creating a prepay on process loads
+	- [ ] IR-4641 - Invoice Issues
+	- [ ] Replace Installer project in Point Of Sale
+	- [ ] Create new release of Point Of Sale
+- [X] IR-7047 - Time Clock Manager Part-Time Employees Average Hours timeout
+- [o] 1095C File Changes
+	- [X] Part-time Employees with no coverage plan ever are being missed. Should be rows with BenefitElection empty and no effective date 
+	- [ ] Employee #9458 is showing PT for last record (03/01/2022) but should be FT. Previous plan was from 09/01/2021 - [[02/28/2022]]
+- [ ] Send Jordan a list of Employees eligible for Vaction and for Holiday pay on 07/04
+- [ ]  
+=

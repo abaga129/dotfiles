@@ -35,7 +35,7 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'preservim/nerdtree'
 
-Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -54,6 +54,7 @@ call plug#end()
 --require'lspconfig'.serve_d.setup{}
 
 require("nvim-autopairs").setup {}
+require("nvim-tree").setup()
 
 vim.cmd [[
 " Vimwiki toggle list items

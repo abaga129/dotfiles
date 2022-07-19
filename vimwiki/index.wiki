@@ -1,0 +1,10 @@
+= My Personal Wiki =
+
+== Weekly Notes ==
+[[Weekly Notes]]
+
+== Program Notes ==
+[[Sales Manager]]
+
+== Useful Scripts ==
+[[Python]]

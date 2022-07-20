@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 #
@@ -122,6 +124,8 @@ alias dotfiles='/usr/bin/git --git-dir=/home/reker/.dotfiles/ --work-tree=/home/
 INSERT_MODE_INDICATOR="%F{yellow}+%f"
 
 export PATH="/home/reker/.dotnet:$PATH"
+export PATH="$PATH:/home/reker/.dotnet/tools"
+
 # ####################################################################################
 # WORK SPECIFIC config 
 # Detects if HOSTNAME matches expected value
@@ -136,3 +140,4 @@ else
   export VST2_SDK=/home/reker/Programming/vst2_sdk
 fi
 
+export PATH="/opt/lua-language-server/bin:$PATH"

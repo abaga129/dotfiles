@@ -122,3 +122,17 @@ export PATH="/home/reker/.local/bin:$PATH"
 alias dotfiles='/usr/bin/git --git-dir=/home/reker/.dotfiles/ --work-tree=/home/reker'
 
 INSERT_MODE_INDICATOR="%F{yellow}+%f"
+
+
+# ####################################################################################
+# WORK SPECIFIC config 
+# Detects if HOSTNAME matches expected value
+# ####################################################################################
+if [[ $(hostname) = 'PF23FNFR' ]]; then
+  export REPOS='/mnt/c/Users/ethanpreker/source/repos'
+
+  if [[ $PWD = '/home/reker' ]]; then
+    cd $REPOS
+  fi
+fi
+

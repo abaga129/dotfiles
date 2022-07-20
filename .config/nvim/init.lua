@@ -1,26 +1,23 @@
+require('plugins')
+
 vim.cmd [[
 :set number
 :set relativenumber
 :set mouse=a
 ]]
 
+if vim.g.nvui then
+  -- Configure through vim commands
+  vim.cmd [[NvuiCmdFontFamily MeslaLGS NF]]
+end 
+
 vim.cmd [[
 call plug#begin()
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-
 Plug 'nanotee/sqls.nvim'
 
 " For vsnip users.
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
-
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 Plug 'ncm2/ncm2'
 Plug 'SirVer/ultisnips'
@@ -49,6 +46,10 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+
+" Cosmic UI
+Plug 'MunifTanjim/nui.nvim'
+Plug 'CosmicNvim/cosmic-ui'
 call plug#end()
 ]]
 
@@ -63,6 +64,9 @@ require('lspconfig').sqls.setup{
         require('sqls').on_attach(client, bufnr)
     end
 }
+
+require('cosmic-ui').setup()
+
 vim.cmd [[
 " Vimwiki toggle list items
 nnoremap <leader>t :VimwikiToggleListItem<CR>
@@ -87,38 +91,8 @@ set expandtab
 
 -- vim-airline config
 vim.cmd [[
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-
-" air-line
 let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-
-" airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+let g:airline_theme='jellybeans'
 ]]
 
 -- AUTO COMPLETION

@@ -7,7 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+#
 # Path to your oh-my-zsh installation.
 export ZSH="/home/reker/.oh-my-zsh"
 
@@ -111,8 +111,6 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export VST2_SDK=/home/reker/Programming/vst2_sdk
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -123,7 +121,7 @@ alias dotfiles='/usr/bin/git --git-dir=/home/reker/.dotfiles/ --work-tree=/home/
 
 INSERT_MODE_INDICATOR="%F{yellow}+%f"
 
-
+export PATH="/home/reker/.dotnet:$PATH"
 # ####################################################################################
 # WORK SPECIFIC config 
 # Detects if HOSTNAME matches expected value
@@ -134,5 +132,7 @@ if [[ $(hostname) = 'PF23FNFR' ]]; then
   if [[ $PWD = '/home/reker' ]]; then
     cd $REPOS
   fi
+else
+  export VST2_SDK=/home/reker/Programming/vst2_sdk
 fi
 
